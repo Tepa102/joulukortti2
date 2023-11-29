@@ -6,6 +6,9 @@ const ctx = canvas.getContext("2d");
 const taustakuva = new Image();
 taustakuva.src = 'puuvalkoinen.png';
 
+/*const audio = new Audio('silent-night.mp3');
+audio.play();*/
+
 taustakuva.onload = function() {
     ctx.drawImage(taustakuva, 0, 0, canvas.width, canvas.height);
 
@@ -25,3 +28,23 @@ taustakuva.onload = function() {
     ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);
 
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var canvas = document.getElementById('myCanvas');
+    var playButton = document.getElementById('playButton');
+ 
+  
+    var audio = new Audio();
+    audio.src = 'silent-night.mp3';
+  
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+          audio.play();
+          playButton.innerHTML = 'Pause Audio';
+        } else {
+          audio.pause();
+          playButton.innerHTML = 'Play Audio';
+        }
+    });
+  });
+  
