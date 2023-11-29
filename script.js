@@ -30,21 +30,46 @@ taustakuva.onload = function() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    var canvas = document.getElementById('myCanvas');
-    var playButton = document.getElementById('playButton');
- 
-  
-    var audio = new Audio();
+    const canvas = document.getElementById('kanvas');
+    const context = canvas.getContext('2d');
+    const playButton = document.getElementById('playButton');
+
+    const image = new Image();
+    image.src = 'porokuva.png';
+
+    image.onload = function () {
+        // Piirrä kuva canvakselle, kun se on ladattu
+        context.drawImage(image, -100, 320, canvas.width - 300, canvas.height - 320);
+    };
+
+    const image2 = new Image();
+    image2.src = 'tahti_vilkkuu.png';
+
+    let frameIndex = 0;
+    const frameWidth = 350;
+    
+    image2.onload = function () {
+        setInterval(function () {
+            // Poista edellisen kehyksen pikselit
+            context.clearRect(350, 150, frameWidth, image2.height);
+
+            // Piirrä uusi kehys
+            context.drawImage(image2, frameIndex * frameWidth, 0, frameWidth, image2.height, 350, 150, frameWidth, image2.height);
+            
+            frameIndex = (frameIndex + 1) % 2;
+        }, 500);
+    }
+
+    const audio = new Audio();
     audio.src = 'silent-night.mp3';
-  
+
     playButton.addEventListener('click', function () {
         if (audio.paused) {
-          audio.play();
-          playButton.innerHTML = 'Pause Audio';
+            audio.play();
+            playButton.innerHTML = 'Pause Audio';
         } else {
-          audio.pause();
-          playButton.innerHTML = 'Play Audio';
+            audio.pause();
+            playButton.innerHTML = 'Play Audio';
         }
     });
-  });
-  
+});
