@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* Lisätty position: relative; */
+}
+
+.kanvas {
+    top: 0;
+    width: 500px;
+    height: 800px;
+    background-image: url("puuvalkoinen.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: aqua;
+}
+
+.teksti {
+    font-size: x-large;
+    font-family: 'Meie Script', cursive, sans-serif;
+    text-align: center;
+    color: red;
+    position: relative;
+    top: -750px; /* Voit säätää tarvittaessa */
+}
