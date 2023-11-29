@@ -21,6 +21,7 @@ taustakuva.onload = function() {
     ctx.fillText('Uutta Vuotta 2024', canvas.width / 2, 120);
     ctx.font = "20px 'Meie Script'";
     ctx.fillText('Toivottavat:', canvas.width / 2, 150);
-    ctx.fillText('Terttu, Mikko, Noora, Tiia ja Teemu', canvas.width / 2, 180);
+    ctx.fillText('Terttu, Mikko', canvas.width / 2, 180);
+    ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);
 
 }
