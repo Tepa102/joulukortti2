@@ -46,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const poroY = canvas.height - 150; // Voit muuttaa tätä arvoa tarpeen mukaan
         ctx.drawImage(poro, -140, poroY - 50, 300, 200);
 
-        // Piirrä tähti, jos se on näkyvissä
-        drawStar();
-
         // Liikuta pukkia vasemmalta oikealle ja takaisin
         x += 2; // Voit muuttaa tätä liikkumisnopeutta tarpeen mukaan
 
@@ -56,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (x > canvas.width) {
             x = -frameWidth * 1.7;
         }
+
         // Piirrä pukki
         ctx.drawImage(
             pukki,
@@ -74,13 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Piirrä tekstit
         drawText();
+        drawStar();
     }
 
     // Piirrä tähti
     function drawStar() {
-        const starFrameWidth = image2.width / 2; // Olettaen, että kaksi framea
+        const starFrameWidth = image2.width *.8; // Olettaen, että kaksi framea
         const sourceX = frameIndex * starFrameWidth;
-        ctx.drawImage(image2, sourceX, 0, starFrameWidth, image2.height, 350, 150, frameWidth * 1.5, image2.height * 1.5);
+        ctx.drawImage(image2, sourceX, 0, starFrameWidth, image2.height *.4, 350, 150, frameWidth * 1.2, image2.height * 1.2);
     }
 
     // Piirrä tekstit
@@ -95,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.fillText('Hyvää joulua', canvas.width / 2, 40);
         ctx.fillText('Onnellista', canvas.width / 2, 80);
         ctx.fillText('Uutta Vuotta 2024', canvas.width / 2, 120);
-        ctx.font = "20px 'Meie Script'";
+        ctx.font = "25px 'Meie Script'";
         ctx.fillText('Toivottavat:', canvas.width / 2, 150);
-        ctx.fillText('T, M', canvas.width / 2, 180);
-        ctx.fillText('N, T ja T', canvas.width / 2, 210);
+        ctx.fillText('Terttu, Mikko', canvas.width / 2, 180);
+        ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);
     }
 
     // Piirrä tekstit ja muu alkuperäinen koodi
