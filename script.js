@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function drawStar() {
         const starFrameWidth = image2.width *.8; // Olettaen, että kaksi framea
         const sourceX = frameIndex * starFrameWidth;
-        ctx.drawImage(image2, sourceX, 0, starFrameWidth, image2.height *.4, 350, 150, frameWidth * 1.2, image2.height * 1.2);
+        ctx.drawImage(image2, sourceX, 0, starFrameWidth, image2.height *.4, 200, 150, frameWidth * 1.2, image2.height * 1.2);
     }
 
     // Piirrä tekstit
