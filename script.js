@@ -86,18 +86,30 @@ document.addEventListener('DOMContentLoaded', function () {
     function drawText() {
         // Asetetaan tekstin väri
         ctx.fillStyle = "red";
-
         // Asetetaan Google Font
-        ctx.font = "40px 'Meie Script'";
+        ctx.font = "42px 'Meie Script'";
 
         ctx.textAlign = 'center';
-        ctx.fillText('Hyvää joulua', canvas.width / 2, 40);
-        ctx.fillText('Onnellista', canvas.width / 2, 80);
-        ctx.fillText('Uutta Vuotta 2024', canvas.width / 2, 120);
-        ctx.font = "25px 'Meie Script'";
-        ctx.fillText('Toivottavat:', canvas.width / 2, 150);
-        ctx.fillText('Terttu, Mikko', canvas.width / 2, 180);
-        ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);
+        var text1 = 'Hyvää Joulua';
+        var text2 = 'Onnellista';
+        var text3 = 'Uutta Vuotta 2024';
+        var text4 = 'Toivottavat';
+        var text5 = 'Terttu ja Mikko perheineen'
+        ctx.strokeStyle = 'black';  // Reunaviivan väri
+        ctx.lineWidth = 2;
+        ctx.strokeText(text1, canvas.width / 2, 60);   
+        ctx.fillText(text1, canvas.width / 2, 60);
+        ctx.strokeText(text2, canvas.width / 2, 100);
+        ctx.fillText(text2, canvas.width / 2, 100);
+        ctx.strokeText(text3, canvas.width / 2, 140);
+        ctx.fillText(text3, canvas.width / 2, 140);
+        ctx.font = "25px 'Browier'";
+        ctx.lineWidth = 1.5
+        ctx.strokeText(text4, canvas.width / 2, 170);
+        ctx.fillText(text4, canvas.width / 2, 170);
+        ctx.strokeText(text5, canvas.width / 2, 200);
+        ctx.fillText(text5, canvas.width / 2, 200);
+        /*ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);*/
     }
 
     // Piirrä tekstit ja muu alkuperäinen koodi
