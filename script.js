@@ -90,11 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.font = "42px 'Meie Script'";
 
         ctx.textAlign = 'center';
-        var text1 = 'Hyvää Joulua';
-        var text2 = 'Onnellista';
-        var text3 = 'Uutta Vuotta 2024';
-        var text4 = 'Toivottavat';
-        var text5 = 'Terttu ja Mikko perheineen'
+        let text1 = 'Hyvää Joulua';
+        let text2 = 'Onnellista';
+        let text3 = 'Uutta Vuotta 2024';
+
         ctx.strokeStyle = 'black';  // Reunaviivan väri
         ctx.lineWidth = 2;
         ctx.strokeText(text1, canvas.width / 2, 60);   
@@ -109,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.fillText(text4, canvas.width / 2, 170);
         ctx.strokeText(text5, canvas.width / 2, 200);
         ctx.fillText(text5, canvas.width / 2, 200);
+        /*ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);*/
     }
 
     // Piirrä tekstit ja muu alkuperäinen koodi
