@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let text1 = 'Hyvää Joulua';
         let text2 = 'Onnellista';
         let text3 = 'Uutta Vuotta 2024';
+        let text4 = 'Toivottavat';
+        let text5 = 'Terttu ja Mikko perheineen'
 
         ctx.strokeStyle = 'black';  // Reunaviivan väri
         ctx.lineWidth = 2;
