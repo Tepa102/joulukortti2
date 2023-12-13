@@ -104,10 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.fillText(text3, canvas.width / 2, 140);
         ctx.font = "25px 'Browier'";
         ctx.lineWidth = 1.5
-        ctx.strokeText(text4, canvas.width / 2, 170);
-        ctx.fillText(text4, canvas.width / 2, 170);
-        ctx.strokeText(text5, canvas.width / 2, 200);
-        ctx.fillText(text5, canvas.width / 2, 200);
+
         /*ctx.fillText('Noora, Tiia ja Teemu', canvas.width / 2, 210);*/
     }
 
